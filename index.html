@@ -1,1 +1,387 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Agreement Form</title>
+  <style>
+       body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      width: calc(100% - 12px); /* Adjusted width to accommodate labels */
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .input-group > label {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .input-group > input {
+      flex: 2;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1></h1>
+
+  <!-- Guarantor Section -->
+  <form id="rentalForm">
+  <div class="container">
+    <h2>Guarantor Information</h2>
+    <div class="input-group">
+      <label for="guarantorFirst">Guarantor First Name:</label>
+      <input type="text" id="guarantorFirst" name="guarantorFirst" required placeholder="Guarantor First Name">
+    </div>
+    <div class="input-group">
+      <label for="guarantorLast">Guarantor Last Name:</label>
+      <input type="text" id="guarantorLast" name="guarantorLast" required placeholder="Guarantor Last Name">
+    </div>
+    <div class="input-group">
+      <label for="guarantorEmail">Guarantor Email:</label>
+      <input type="email" id="guarantorEmail" name="guarantorEmail" required placeholder="Guarantor Email">
+    </div>
+    <div class="input-group">
+      <label for="guarantorAddress">Guarantor Address:</label>
+      <input type="text" id="guarantorAddress" name="guarantorAddress" required placeholder="Guarantor Address">
+    </div>
+    <div class="input-group">
+      <label for="guarantorPostcode">Guarantor Postcode:</label>
+      <input type="text" id="guarantorPostcode" name="guarantorPostcode" required placeholder="Guarantor Postcode">
+    </div>
+  </div>
+
+  <!-- Witness Section -->
+  <div class="container">
+    <h2>Witness Information</h2>
+    <div class="input-group">
+      <label for="witnessFirstName">Witness First Name:</label>
+      <input type="text" id="witnessFirstName" name="witnessFirstName" required placeholder="Witness First Name">
+    </div>
+    <div class="input-group">
+      <label for="witnessLastName">Witness Last Name:</label>
+      <input type="text" id="witnessLastName" name="witnessLastName" required placeholder="Witness Last Name">
+    </div>
+    <div class="input-group">
+      <label for="witnessEmail">Witness Email:</label>
+      <input type="email" id="witnessEmail" name="witnessEmail" placeholder="Witness Email">
+    </div>
+  </div>
+
+  <!-- Tenant Section -->
+  <div class="container">
+    <h2>Tenant Information</h2>
+    <div class="input-group">
+      <label for="tenantName">Tenant Name:</label>
+      <input type="text" id="tenantName" name="tenantName" required placeholder="Tenant Name">
+    </div>
+    <div class="input-group">
+      <label for="tenantEmail">Tenant Email:</label>
+      <input type="email" id="tenantEmail" name="tenantEmail" required placeholder="Tenant Email">
+    </div>
+  </div>
+
+  <!-- Student Roost Property Section -->
+  <div class="container">
+    <h2>Student Roost Property Information</h2>
+
+
+    <div class="input-group">
+      <label for="studentRoostProperty">Student Roost Property:</label>
+     <select id="studentRoostProperty" name="studentRoostProperty">
+  <option value="Apollo Court">Apollo Court</option>
+  <option value="Brewers Court">Brewers Court</option>
+  <option value="Brookland Road">Brookland Road</option>
+  <option value="Buchanan View">Buchanan View</option>
+  <option value="Byrom Point">Byrom Point</option>
+  <option value="Capital Gate">Capital Gate</option>
+  <option value="Central Place">Central Place</option>
+  <option value="Chapel Heights">Chapel Heights</option>
+  <option value="Corfe House">Corfe House</option>
+  <option value="Cornerhouse">Cornerhouse</option>
+  <option value="Deakins Place">Deakins Place</option>
+  <option value="Dobbie's Point">Dobbie's Point</option>
+  <option value="Eastern Boulevard">Eastern Boulevard</option>
+  <option value="Frederick House">Frederick House</option>
+  <option value="Gibson Street">Gibson Street</option>
+  <option value="Great Patrick Street">Great Patrick Street</option>
+  <option value="Hillfort House">Hillfort House</option>
+  <option value="Hollis Croft">Hollis Croft</option>
+  <option value="Home Park">Home Park</option>
+  <option value="Hydrogen">Hydrogen</option>
+  <option value="John Bell House">John Bell House</option>
+  <option value="Lady Nicolson Court">Lady Nicolson Court</option>
+  <option value="Laycock Studios">Laycock Studios</option>
+  <option value="Mannequin House">Mannequin House</option>
+  <option value="Mealmarket Exchange">Mealmarket Exchange</option>
+  <option value="Merchant Studios">Merchant Studios</option>
+  <option value="Myrtle Court">Myrtle Court</option>
+  <option value="Newarke Street">Newarke Street</option>
+  <option value="Newcastle 1">Newcastle 1</option>
+  <option value="Nottingham Two">Nottingham Two</option>
+  <option value="Panmure Court">Panmure Court</option>
+  <option value="Pittodrie Street">Pittodrie Street</option>
+  <option value="Portsburgh Court">Portsburgh Court</option>
+  <option value="Queens Court">Queens Court</option>
+  <option value="Regents Court">Regents Court</option>
+  <option value="Sheffield 3">Sheffield 3</option>
+  <option value="Snowdon Hall">Snowdon Hall</option>
+  <option value="St Davids">St Davids</option>
+  <option value="St James' House">St James' House</option>
+  <option value="St James' Point">St James' Point</option>
+  <option value="St Mungo's">St Mungo's</option>
+  <option value="Swanston House">Swanston House</option>
+  <option value="The Boulevard">The Boulevard</option>
+  <option value="The Oaks">The Oaks</option>
+  <option value="The Railyard">The Railyard</option>
+  <option value="The Summit">The Summit</option>
+  <option value="The Towpath">The Towpath</option>
+  <option value="Tramways">Tramways</option>
+  <option value="Trinity Square">Trinity Square</option>
+  <option value="Upperton Road">Upperton Road</option>
+  <option value="Vincent Place">Vincent Place</option>
+  <option value="York House">York House</option>
+  <option value="Zinc Quarter">Zinc Quarter</option>
+</select>
+    </div>
+<div class="input-group">
+  <label for="propertyEmail">Property Email:</label>
+  <select id="propertyEmail" name="propertyEmail">
+    <option value="rooster@yopmail.com">(TEST) rooster@yopmail.com</option>
+
+    <option value="apollo.court@studentroost.co.uk">Apollo Court - apollo.court@studentroost.co.uk</option>
+    <option value="brewers.court@studentroost.co.uk">Brewers Court - brewers.court@studentroost.co.uk</option>
+    <option value="brookland.road@studentroost.co.uk">Brookland Road - brookland.road@studentroost.co.uk</option>
+    <option value="buchanan.view@studentroost.co.uk">Buchanan View - buchanan.view@studentroost.co.uk</option>
+    <option value="byrom.point@studentroost.co.uk">Byrom Point - byrom.point@studentroost.co.uk</option>
+    <option value="capital.gate@studentroost.co.uk">Capital Gate - capital.gate@studentroost.co.uk</option>
+    <option value="central.place@studentroost.co.uk">Central Place - central.place@studentroost.co.uk</option>
+    <option value="chapel.heights@studentroost.co.uk">Chapel Heights - chapel.heights@studentroost.co.uk</option>
+    <option value="corfe.house@studentroost.co.uk">Corfe House - corfe.house@studentroost.co.uk</option>
+    <option value="cornerhouse@studentroost.co.uk">Cornerhouse - cornerhouse@studentroost.co.uk</option>
+    <option value="deakins.place@studentroost.co.uk">Deakins Place - deakins.place@studentroost.co.uk</option>
+    <option value="dobbies.point@studentroost.co.uk">Dobbies Point - dobbies.point@studentroost.co.uk</option>
+    <option value="eastern.boulevard@studentroost.co.uk">Eastern Boulevard - eastern.boulevard@studentroost.co.uk</option>
+    <option value="gibson.street@studentroost.co.uk">Gibson Street - gibson.street@studentroost.co.uk</option>
+    <option value="great.patrick.street@studentroost.co.uk">Great Patrick Street - great.patrick.street@studentroost.co.uk</option>
+    <option value="hollis.croft@studentroost.co.uk">Hollis Croft - hollis.croft@studentroost.co.uk</option>
+    <option value="home.park@studentroost.co.uk">Home Park - home.park@studentroost.co.uk</option>
+    <option value="john.bell.house@studentroost.co.uk">John Bell House - john.bell.house@studentroost.co.uk</option>
+    <option value="lady.nicolson.court@studentroost.co.uk">Lady Nicolson Court - lady.nicolson.court@studentroost.co.uk</option>
+    <option value="laycock.studios@studentroost.co.uk">Laycock Studios - laycock.studios@studentroost.co.uk</option>
+    <option value="little.patrick.street@studentroost.co.uk">Little Patrick Street - little.patrick.street@studentroost.co.uk</option>
+    <option value="mannequin.house@studentroost.co.uk">Mannequin House - mannequin.house@studentroost.co.uk</option>
+    <option value="mealmarket.exchange@studentroost.co.uk">Mealmarket Exchange - mealmarket.exchange@studentroost.co.uk</option>
+    <option value="merchant.studios@studentroost.co.uk">Merchant Studios - merchant.studios@studentroost.co.uk</option>
+    <option value="myrtle.court@studentroost.co.uk">Myrtle Court - myrtle.court@studentroost.co.uk</option>
+    <option value="nelson.place@studentroost.co.uk">Nelson Place - nelson.place@studentroost.co.uk</option>
+    <option value="newarke.street.apartments@studentroost.co.uk">Newarke Street - newarke.street.apartments@studentroost.co.uk</option>
+    <option value="newcastle.1@studentroost.co.uk">Newcastle 1 - newcastle.1@studentroost.co.uk</option>
+    <option value="nottingham.two@studentroost.co.uk">Nottingham Two - nottingham.two@studentroost.co.uk</option>
+    <option value="panmure.court@studentroost.co.uk">Panmure Court - panmure.court@studentroost.co.uk</option>
+    <option value="pittodrie.street@studentroost.co.uk">Pittodrie Street - pittodrie.street@studentroost.co.uk</option>
+    <option value="queens.court@studentroost.co.uk">Queens Court - queens.court@studentroost.co.uk</option>
+    <option value="regents.court@studentroost.co.uk">Regents Court - regents.court@studentroost.co.uk</option>
+    <option value="sheffield.3@studentroost.co.uk">Sheffield 3 - sheffield.3@studentroost.co.uk</option>
+    <option value="snowdon.hall@studentroost.co.uk">Snowdon Hall - snowdon.hall@studentroost.co.uk</option>
+    <option value="st.davids@studentroost.co.uk">St. Davids - st.davids@studentroost.co.uk</option>
+    <option value="st.james.house@studentroost.co.uk">St. James House - st.james.house@studentroost.co.uk</option>
+    <option value="st.james.point@studentroost.co.uk">St. James Point - st.james.point@studentroost.co.uk</option>
+    <option value="st.mungos@studentroost.co.uk">St. Mungos - st.mungos@studentroost.co.uk</option>
+    <option value="swanston.house@studentroost.co.uk">Swanston House - swanston.house@studentroost.co.uk</option>
+    <option value="the.boulevard@studentroost.co.uk">The Boulevard - the.boulevard@studentroost.co.uk</option>
+    <option value="the.depot@studentroost.co.uk">The Depot - the.depot@studentroost.co.uk</option>
+    <option value="the.railyard@studentroost.co.uk">The Railyard - the.railyard@studentroost.co.uk</option>
+    <option value="the.summit@studentroost.co.uk">The Summit - the.summit@studentroost.co.uk</option>
+    <option value="the.towpath@studentroost.co.uk">The Towpath - the.towpath@studentroost.co.uk</option>
+    <option value="tramways@studentroost.co.uk">Tramways - tramways@studentroost.co.uk</option>
+    <option value="trinity.square@studentroost.co.uk">Trinity Square - trinity.square@studentroost.co.uk</option>
+    <option value="upperton.road@studentroost.co.uk">Upperton Road - upperton.road@studentroost.co.uk</option>
+    <option value="vincent.place@studentroost.co.uk">Vincent Place - vincent.place@studentroost.co.uk</option>
+    <option value="york.house@studentroost.co.uk">York House - york.house@studentroost.co.uk</option>
+    <option value="zinc.quarter@studentroost.co.uk">Zinc Quarter - zinc.quarter@studentroost.co.uk</option>
+  </select>
+</div>
+    <div class="input-group">
+      <label for="studentRoostEntity">Student Roost Entity:</label>
+      <input type="text" id="studentRoostEntity" name="studentRoostEntity" required placeholder="Student Roost Entity">
+    </div>
+    <div class="input-group">
+      <label for="bedroomType">Bedroom Type:</label>
+      <input type="text" id="bedroomType" name="bedroomType" required placeholder="Bedroom Type">
+    </div>
+    <div class="input-group">
+      <label for="totalContractValue">Total Contract Value: £</label>
+      <input type="number" id="totalContractValue" step="0.01" name="totalContractValue" required placeholder="Total Contract Value">
+    </div>
+    <div class="input-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" required placeholder="Start Date">
+    </div>
+    <div class="input-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" required placeholder="End Date">
+    </div>
+  </div>
+
+<div class="container">
+      <button type="submit">Create Document</button>
+</form>
+
+</div>
+ <script>
+    // Email validation function
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    // Check emails function
+    function checkEmails() {
+      const guarantorEmail = document.getElementById('guarantorEmail').value;
+      const witnessEmail = document.getElementById('witnessEmail').value;
+      const tenantEmail = document.getElementById('tenantEmail').value;
+      const propertyEmail = document.getElementById('propertyEmail').value;
+
+      if (!validateEmail(guarantorEmail)) {
+        alert('Guarantor Email is not valid');
+      } 
+
+      if (!validateEmail(witnessEmail)) {
+        alert('Witness Email is not valid');
+      } 
+      if (!validateEmail(tenantEmail)) {
+        alert('Tenant Email is not valid');
+      } 
+
+      if (!validateEmail(propertyEmail)) {
+        alert('Property Email is not valid');
+      } 
+    }
+
+ function generateAndOpenURL(event) {
+      event.preventDefault();
+
+      // Get values from the input fields
+const guarantorFirst = document.getElementById('guarantorFirst').value;
+const guarantorLast = document.getElementById('guarantorLast').value;
+const guarantorEmail = document.getElementById('guarantorEmail').value;
+const guarantorAddress = document.getElementById('guarantorAddress').value;
+const guarantorPostcode = document.getElementById('guarantorPostcode').value;
+const studentRoostProperty = document.getElementById('studentRoostProperty').value;
+const tenantName = document.getElementById('tenantName').value;
+const bedroomType = document.getElementById('bedroomType').value;
+const totalContractValue = document.getElementById('totalContractValue').value;
+const startDate = document.getElementById('startDate').value;
+const endDate = document.getElementById('endDate').value;
+const propertyEmail = document.getElementById('propertyEmail').value;
+const witnessFirstName = document.getElementById('witnessFirstName').value;
+const witnessLastName = document.getElementById('witnessLastName').value;
+const witnessEmail= document.getElementById('witnessEmail').value;
+
+// Build the URL
+const url = "https://demo.docusign.net/Member/PowerFormSigning.aspx?" +
+  "PowerFormId=dcf0ba2a-acd2-4ecb-b7fd-bd2d100f997f" +
+  "&env=demo" +
+  "&acct=f860fd3a-8e82-427b-98c7-04e8925cb155" +
+  "&v=2" +
+  "&GuarantorAddress=" + encodeURIComponent(guarantorAddress) +
+  "&GuarantorPostcode=" + encodeURIComponent(guarantorPostcode) +
+  "&StudentRoostEntity=" + encodeURIComponent(studentRoostProperty) +
+  "&TenantName=" + encodeURIComponent(tenantName) +
+  "&LandlordName=" + encodeURIComponent(studentRoostProperty) +
+  "&BedroomType=" + encodeURIComponent(bedroomType) +
+  "&TotalContractValue=£" + encodeURIComponent(totalContractValue) +
+  "&LicenceStart=" + encodeURIComponent(startDate) +
+  "&LicenceEnd=" + encodeURIComponent(endDate) +
+  "&propertyemailaddress=" + encodeURIComponent(propertyEmail) +
+  "&GuarantorFirst=" + encodeURIComponent(guarantorFirst) +
+  "&GuarantorLast=" + encodeURIComponent(guarantorLast) +
+  "&GuarantorPostCode=" + encodeURIComponent(guarantorPostcode) +
+  "&GuarantorEmail=" + encodeURIComponent(guarantorEmail) +
+  "&WitnessFirstName=" + encodeURIComponent(witnessFirstName) +
+  "&WitnessLastName=" + encodeURIComponent(witnessLastName) +
+  "&Guarantor_UserName=" + encodeURIComponent(guarantorFirst+ " " + guarantorLast) +
+  "&Guarantor_Email=" + encodeURIComponent(guarantorEmail) +
+  "&Witness_UserName=" + encodeURIComponent(witnessFirstName + " " + witnessLastName) +
+  "&Witness_Email=" + encodeURIComponent(witnessEmail) +
+  "&Student_UserName=" + encodeURIComponent(tenantName) +
+  "&Student_Email=" + encodeURIComponent(guarantorEmail) +
+  "&Copy_UserName=" + encodeURIComponent(propertyEmail) +
+  "&Copy_Email=" + encodeURIComponent(propertyEmail) +
+  "&activateonly=1";
+      // Open URL in a new tab
+console.log(url);
+      window.open(url, '_blank');
+    }
+
+    document.getElementById('rentalForm').addEventListener('submit', generateAndOpenURL);
+
+    // Add event listener to the button
+    document.getElementById('checkEmailButton').addEventListener('click', checkEmails);
+  </script>
+</body>
+</html>
+
